@@ -1,9 +1,8 @@
 from rest_framework import serializers
-from .models import Task
+from .models import ComputerSession
 
-class TaskSerializer(serializers.ModelSerializer):
+class ComputerSessionSerializer(serializers.ModelSerializer):
+    """Serializer for the ComputerSession model."""
     class Meta:
-        model = Task
-        # fields = ('id', 'title', 'description', 'done')
+        model = ComputerSession
         fields = '__all__'
-        

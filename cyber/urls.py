@@ -4,9 +4,9 @@ from rest_framework import routers
 from cyber import views
 
 router = routers.DefaultRouter()
-router.register(r'', views.TaskView, 'tasks')
+router.register(r'', views.ComputerSessionView, 'computersessions')
 
 urlpatterns = [
     path('api/v1/', include(router.urls)),
-    path('docs/', include_docs_urls(title='Tasks API'))
+    path('docs/', include_docs_urls(title='Computer Sessions API'))
 ]

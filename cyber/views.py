@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .serializer import TaskSerializer
-from .models import Task
+from .serializer import ComputerSessionSerializer
+from .models import ComputerSession
+from rest_framework.permissions import IsAuthenticated
 
-# Create your views here.
-class TaskView(viewsets.ModelViewSet):
-    serializer_class = TaskSerializer
-    queryset = Task.objects.all()
+class ComputerSessionView(viewsets.ModelViewSet):
+    """Viewset for the ComputerSession model."""
+    serializer_class = ComputerSessionSerializer
+    queryset = ComputerSession.objects.all()
+    permission_classes = [IsAuthenticated]  # Only authenticated users can interact with the sessions

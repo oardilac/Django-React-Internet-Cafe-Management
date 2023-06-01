@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .serializer import ComputerSessionSerializer
+from .serializers import ComputerSessionSerializer
 from .models import ComputerSession
 from rest_framework.permissions import IsAuthenticated
 

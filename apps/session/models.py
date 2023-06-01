@@ -20,7 +20,7 @@ class ComputerSession(models.Model):
     en_uso = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.nombre
+       return self.nombre
 
 
 class Sesion(models.Model):

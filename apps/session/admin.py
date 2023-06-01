@@ -1,7 +1,7 @@
 from django.contrib import admin
-from . import models
+from .models import Sesion
 
-@admin.register(models.Sesion)
+@admin.register(Sesion)
 class SesionAdmin(admin.ModelAdmin):
     list_display = ('usuario_email', 'usuario_first_name', 'usuario_last_name', 'hora_inicio', 'hora_fin')
     search_fields = ('usuario__email', 'usuario__first_name', 'usuario__last_name')
